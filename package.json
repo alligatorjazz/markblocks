@@ -1,7 +1,7 @@
 {
   "author": "Damian Thomas @alligatorjazz",
   "bin": {
-    "blockify": "./bin/run.js"
+    "markblocks": "./bin/run.js"
   },
   "dependencies": {
     "@oclif/core": "^3",
@@ -38,24 +38,17 @@
   "homepage": "https://github.com/alligatorjazz/blockifier",
   "license": "MIT",
   "main": "",
-  "name": "blockify",
+  "name": "markblocks",
   "oclif": {
     "default": ".",
-    "bin": "blockify",
-    "dirname": "blockify",
+    "bin": "markblocks",
+    "dirname": "markblocks",
     "commands": "./dist",
     "plugins": [
-      "@oclif/plugin-help",
-      "@oclif/plugin-plugins"
-    ],
-    "topicSeparator": " ",
-    "topics": {
-      "hello": {
-        "description": "Say hello to the world and others"
-      }
-    }
+      "@oclif/plugin-help"
+    ]
   },
-  "repository": "alligatorjazz/blockify",
+  "repository": "alligatorjazz/markblocks",
   "scripts": {
     "build": "shx rm -rf dist && tsc -b",
     "lint": "eslint . --ext .ts",
@@ -66,7 +59,7 @@
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
-  "version": "0.1.0",
+  "version": "0.1.1",
   "bugs": "https://github.com/alligatorjazz/blockifier/issues",
   "keywords": [
     "oclif"

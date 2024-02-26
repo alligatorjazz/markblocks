@@ -1,11 +1,11 @@
 import { Args, Command, Flags } from '@oclif/core';
 import { readFileSync, writeFileSync } from "node:fs";
 
-export default class Blockify extends Command {
+export default class Markblocks extends Command {
 	static args = {
 		inputFile: Args.string({ description: 'The path to the markdown document.', required: true }),
 		outFile: Args.string({
-			description: 'The output file for the generated output. If not provided, blockify will not run unless the --force flag is provided.',
+			description: 'The output file for the generated output. If not provided, markblocks will not run unless the --force flag is provided.',
 			required: false
 		})
 	}
@@ -14,11 +14,11 @@ export default class Blockify extends Command {
 
 	static examples = [
 		{
-			command: `$ blockify input.md output.md`,
+			command: `$ markblocks input.md output.md`,
 			description: "Add block ids to an existing document."
 		},
 		{
-			command: `$ blockify input.md -f`,
+			command: `$ markblocks input.md -f`,
 			description: "Add block ids to an existing document."
 		}
 	]
@@ -44,7 +44,7 @@ export default class Blockify extends Command {
 
 
 	async run(): Promise<void> {
-		const { args, flags } = await this.parse(Blockify)
+		const { args, flags } = await this.parse(Markblocks)
 		if (!args.outFile && !flags.force) {
 			throw new Error("An outFile must be provided if --force is not enabled.")
 		}
@@ -60,7 +60,6 @@ export default class Blockify extends Command {
 				text: header
 			}));
 		const maxHeaderLevel = headers.sort((a, b) => b.level - a.level)[0].level
-		this.log("max header level: ", maxHeaderLevel)
 
 		let headerMark: number[] = [0, 0, 0, 0, 0, 0];
 		let blockCount = 0;
