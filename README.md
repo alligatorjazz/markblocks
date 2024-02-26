@@ -18,7 +18,7 @@ $ npm install -g markblocks
 $ markblocks COMMAND
 running command...
 $ markblocks (--version)
-markblocks/0.1.1 darwin-arm64 node-v20.5.1
+markblocks/0.1.2 darwin-arm64 node-v20.5.1
 $ markblocks --help [COMMAND]
 USAGE
   $ markblocks COMMAND
@@ -65,7 +65,7 @@ EXAMPLES
     $ markblocks input.md -f
 ```
 
-_See code: [dist/index.ts](https://github.com/alligatorjazz/markblocks/blob/v0.1.1/dist/index.ts)_
+_See code: [dist/index.ts](https://github.com/alligatorjazz/markblocks/blob/v0.1.2/dist/index.ts)_
 
 ## `markblocks help [COMMANDS]`
 
