@@ -14,11 +14,11 @@ oclif example Hello World CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g blockifier
+$ npm install -g blockify
 $ blockify COMMAND
 running command...
 $ blockify (--version)
-blockifier/0.0.0 darwin-arm64 node-v20.5.1
+blockify/0.1.0 darwin-arm64 node-v20.5.1
 $ blockify --help [COMMAND]
 USAGE
   $ blockify COMMAND
@@ -27,8 +27,6 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`blockify hello PERSON`](#blockify-hello-person)
-* [`blockify hello world`](#blockify-hello-world)
 * [`blockify help [COMMANDS]`](#blockify-help-commands)
 * [`blockify plugins`](#blockify-plugins)
 * [`blockify plugins:install PLUGIN...`](#blockify-pluginsinstall-plugin)
@@ -40,48 +38,6 @@ USAGE
 * [`blockify plugins:uninstall PLUGIN...`](#blockify-pluginsuninstall-plugin-1)
 * [`blockify plugins:uninstall PLUGIN...`](#blockify-pluginsuninstall-plugin-2)
 * [`blockify plugins update`](#blockify-plugins-update)
-
-## `blockify hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ blockify hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [src/commands/hello/index.ts](https://github.com/alligatorjazz/blockifier/blob/v0.0.0/src/commands/hello/index.ts)_
-
-## `blockify hello world`
-
-Say hello world
-
-```
-USAGE
-  $ blockify hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ blockify hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [src/commands/hello/world.ts](https://github.com/alligatorjazz/blockifier/blob/v0.0.0/src/commands/hello/world.ts)_
 
 ## `blockify help [COMMANDS]`
 

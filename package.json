@@ -40,7 +40,7 @@
   "main": "",
   "name": "blockify",
   "oclif": {
-	"default": ".",
+    "default": ".",
     "bin": "blockify",
     "dirname": "blockify",
     "commands": "./dist",
@@ -66,7 +66,7 @@
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
   },
-  "version": "0.0.0",
+  "version": "0.1.0",
   "bugs": "https://github.com/alligatorjazz/blockifier/issues",
   "keywords": [
     "oclif"
