@@ -1,6 +1,7 @@
 import { Args, Command, Flags } from '@oclif/core';
 import { readFileSync, writeFileSync } from "node:fs";
 
+// TODO: add support for storyboard export
 export default class Markblocks extends Command {
 	static args = {
 		inputFile: Args.string({ description: 'The path to the markdown document.', required: true }),

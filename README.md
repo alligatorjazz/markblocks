@@ -1,4 +1,4 @@
-blockifier
+markblocks
 =================
 
 oclif example Hello World CLI
@@ -27,7 +27,7 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-- [blockifier](#blockifier)
+- [markblocks](#markblocks)
 - [Usage](#usage)
 - [Commands](#commands)
 	- [`markblocks INPUTFILE [OUTFILE]`](#markblocks-inputfile-outfile)
@@ -48,10 +48,10 @@ ARGUMENTS
 
 FLAGS
   -f, --force           Whether to add block ids to an existing document in the event an outFile is not provided.
-  -h, --includeHeaders  By default, blockifier will not turn markdown headers into blocks. Including this option will
+  -h, --includeHeaders  By default, markblocks will not turn markdown headers into blocks. Including this option will
                         generate block ids for headers as well.
   -r, --random          Whether to use random or human-readable block ids. If enabled, the block ids will be random.
-  -s, --sequential      By default, blockifier will try to generate block ids based on the document's header structure
+  -s, --sequential      By default, markblocks will try to generate block ids based on the document's header structure
                         (e.g. 1.0.0, 1.0.1, etc.). This option will generate ids purely based on each paragraph break.
                         No effect if --random is enabled.
 

@@ -10,7 +10,7 @@
 		"@oclif/plugin-plugins": "^4",
 		"marked": "^12.0.0"
 	},
-	"description": "A simple script that easily adds human-readable block ids to Markdown documents.",
+	"description": "A script that adds human-readable block ids to Markdown documents. Designed for use with Obsidian.",
 	"devDependencies": {
 		"@oclif/prettier-config": "^0.2.1",
 		"@oclif/test": "^3",
