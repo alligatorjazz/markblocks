@@ -1,4 +1,4 @@
-oclif-hello-world
+blockifier
 =================
 
 oclif example Hello World CLI
@@ -27,8 +27,11 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`markblocks INPUTFILE [OUTFILE]`](#markblocks-inputfile-outfile)
-* [`markblocks help [COMMANDS]`](#markblocks-help-commands)
+- [blockifier](#blockifier)
+- [Usage](#usage)
+- [Commands](#commands)
+	- [`markblocks INPUTFILE [OUTFILE]`](#markblocks-inputfile-outfile)
+	- [`markblocks help [COMMANDS]`](#markblocks-help-commands)
 
 ## `markblocks INPUTFILE [OUTFILE]`
 

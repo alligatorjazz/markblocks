@@ -53,13 +53,17 @@ export default class Markblocks extends Command {
 		type Header = { level: HeaderLevel, text: string };
 		const inputFileContent = readFileSync(args.inputFile, { encoding: "utf8" });
 		const lines = inputFileContent.split("\n");
+		// console.log("building headers")
 		const headers: Header[] = lines
 			.filter(line => line.trim().startsWith("#"))
-			.map(header => ({
-				level: Math.min((header.match(/#/g) as string[]).length, 6) as HeaderLevel,
-				text: header
-			}));
-		const maxHeaderLevel = headers.sort((a, b) => b.level - a.level)[0].level
+			.map(header => {
+				console.log(header)
+				return {
+					level: Math.min((header.match(/#/g) as string[]).length, 6) as HeaderLevel,
+					text: header
+				}
+			});
+		const maxHeaderLevel = headers.sort((a, b) => b.level - a.level)[0]?.level ?? 0;
 
 		let headerMark: number[] = [0, 0, 0, 0, 0, 0];
 		let blockCount = 0;
@@ -86,7 +90,7 @@ export default class Markblocks extends Command {
 				if (flags.sequential) {
 					return `${line} ^${++blockCount}`;
 				}
-				
+
 				if (flags.includeHeaders && isHeader) {
 					return `${line} ^${headerMark.slice(0, maxHeaderLevel).join(".")}p0`;
 				}
